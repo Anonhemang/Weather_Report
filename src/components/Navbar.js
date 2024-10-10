@@ -1,22 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function Navbar(props) {
-  // State to manage the toggle for Celsius and Fahrenheit
   const [isCelsius, setIsCelsius] = useState(true);
-
-  // State to track the search input
   const [searchTerm, setSearchTerm] = useState("");
 
-  // Function to handle the toggle switch
+  useEffect(() => {
+    const lastSearch = localStorage.getItem("lastSearch");
+    if (lastSearch) {
+      setSearchTerm(lastSearch);
+    }
+  }, []);
+
   const handleToggle = () => {
     setIsCelsius((prev) => !prev);
   };
 
-  // Handle search submission
   const handleSearch = (e) => {
-    e.preventDefault(); // Prevent page reload
+    e.preventDefault();
+
+    localStorage.setItem("lastSearch", searchTerm);
+
     if (props.onSearch) {
-      props.onSearch(searchTerm); // Pass the search term to the parent component
+      props.onSearch(searchTerm);
     }
   };
 
@@ -24,9 +29,9 @@ export default function Navbar(props) {
     <div>
       <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
-          <h1 className="text-danger" >
+          <a className="navbar-brand" href="/">
             Weather Report
-          </h1>
+          </a>
           <button
             className="navbar-toggler"
             type="button"

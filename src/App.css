@@ -82,6 +82,21 @@ nav {
     width: 90%;
     padding: 4% 6%;
   }
+
+  .loader {
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 0px;
+    margin: 15% 10%;
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
+    animation: spin 2s linear infinite;
+  }
 }
 
 html,
@@ -96,7 +111,7 @@ body {
   border-top: 16px solid #3498db;
   width: 120px;
   height: 120px;
-  margin-top: 15%;
+  margin: 15% 0;
   -webkit-animation: spin 2s linear infinite;
   /* Safari */
   animation: spin 2s linear infinite;
