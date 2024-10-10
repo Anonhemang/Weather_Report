@@ -9,10 +9,10 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Index />} />
-        <Route path="/Nav" element={<Navbar/>} />
-    </Routes>
+        <Route path="/Nav" element={<Navbar />} />
+      </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
 export default App;
