@@ -37,8 +37,8 @@ export default function Index() {
     } else if (condition.includes("Snow")) {
       body.style.backgroundImage = `url(${PartlyCloudyImg}`;
     } else {
-      body.style.backgroundImage = `url(${PartlyCloudyImg}`; // default background
-      body.style.backgroundColor = "#111000"; // or any default color
+      body.style.backgroundImage = `url(${[]}`; 
+      body.style.backgroundColor = "#111000"; 
     }
 
     body.style.backgroundSize = "cover"; // Ensure the background covers the screen
