@@ -123,12 +123,11 @@ export default function Index() {
               {weather.current.condition.text}
             </h3>
             <h3>
-              <i class="bi bi-droplet-half"></i> {weather.current.humidity}
+              <i class="bi bi-droplet-half"></i> {weather.current.humidity}%
             </h3>
             <h3>
-              <i class="bi bi-tornado"></i> {weather.current.wind_kph}
+              <i class="bi bi-tornado"></i> {weather.current.wind_kph} kph
             </h3>
-            
           </div>
         ) : (
           <div>Fetching Data.......</div>
